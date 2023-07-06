@@ -1,0 +1,522 @@
+{
+	"info": {
+		"_postman_id": "da76e205-f53e-447e-bba7-0aa38ce9e3e2",
+		"name": "Eventify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Get all events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/events",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3043"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be3-QQqcl1bGM30dhkP6YwRsnsqs7Z0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Feb 2023 08:42:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Battle of the Bands\",\n        \"description\": \"Get ready for Battle of the Bands, where the hottest up-and-coming rock groups will compete for the ultimate prize. With heart-pumping beats and electrifying performances, you won't want to miss this adrenaline-fueled event. Each band will bring their A-game, leaving everything on the stage for the chance to be crowned champion. Don't miss out on the most unforgettable rock competition of the year!\",\n        \"venue\": \"All Stars Arena, Las Vegas, NV, USA\",\n        \"datetime\": \"2023-03-01T05:00:00.000Z\",\n        \"timezone\": \"America/Los_Angeles\",\n        \"areSeatsAvailable\": true,\n        \"isRegistered\": false,\n        \"isBookmarked\": false,\n        \"imgUrl\": \"https://i.ibb.co/3zbdvWX/battle-of-bands.jpg\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Cowboy Rodeo\",\n        \"description\": \"Hold on tight for the Cowboy Rodeo, where the best riders in the country will compete for the championship title. Witness heart-stopping events like bull riding, calf roping, and steer wrestling that showcase the strength and bravery of these incredible cowboys. With non-stop action and adrenaline-fueled excitement, the Cowboy Rodeo is the ultimate display of rodeo skills and cowboy grit. Don't miss out on this wild and exhilarating event!\",\n        \"venue\": \"BB Center, Dallas, TX, USA\",\n        \"datetime\": \"2023-03-02T03:00:00.000Z\",\n        \"timezone\": \"US/Central\",\n        \"areSeatsAvailable\": false,\n        \"isRegistered\": true,\n        \"isBookmarked\": false,\n        \"imgUrl\": \"https://thumbs.dreamstime.com/b/rodeo-cowboy-rough-ride-tossed-around-his-horse-red-bluff-california-april-63692080.jpg\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Wicked the Musical\",\n        \"description\": \"Get ready for an unforgettable journey into the magical world of Wicked! Join us for this spellbinding musical adventure as we follow the captivating story of two unlikely friends and their journey to become the Wicked Witch of the West and Glinda the Good. With show-stopping musical numbers, stunning costumes, and breathtaking sets, Wicked will transport you to a world beyond your imagination. So come along for the ride and experience the magic of this beloved musical phenomenon.\",\n        \"venue\": \"Gershwin Theatre, NYC, NY, USA\",\n        \"datetime\": \"2023-03-11T00:00:00.000Z\",\n        \"timezone\": \"US/Eastern\",\n        \"areSeatsAvailable\": true,\n        \"isRegistered\": false,\n        \"isBookmarked\": true,\n        \"imgUrl\": \"https://res.cloudinary.com/dwzhqvxaz/f_auto,q_auto,fl_progressive/v1643801942/Titles/Wicked/2022%20Cast/Wicked_Prod2022_1RT_2560x1440.jpg\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Karaoke Contest\",\n        \"description\": \"Get ready to belt out your favorite tunes and show off your vocal skills at the Karaoke Contest! Whether you're a seasoned singer or a first-time performer, this is your chance to take center stage and shine. With a wide selection of songs to choose from, you can sing your heart out and compete for the grand prize. So warm up those vocal cords, gather your friends, and get ready for a night of music, laughter, and karaoke fun!\",\n        \"venue\": \"Old Town Pub, Chicago, IL, USA\",\n        \"datetime\": \"2023-03-21T02:00:00.000Z\",\n        \"timezone\": \"US/Eastern\",\n        \"areSeatsAvailable\": true,\n        \"isRegistered\": false,\n        \"isBookmarked\": false,\n        \"imgUrl\": \"https://i.ibb.co/Hx0gKgH/karaoke-2.jpg\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get event by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/events/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"events",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/events/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"events",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "700"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2bc-JYVNPmimFBrfAYRsACV5Drml6XI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Feb 2023 08:42:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"Karaoke Contest\",\n    \"description\": \"Get ready to belt out your favorite tunes and show off your vocal skills at the Karaoke Contest! Whether you're a seasoned singer or a first-time performer, this is your chance to take center stage and shine. With a wide selection of songs to choose from, you can sing your heart out and compete for the grand prize. So warm up those vocal cords, gather your friends, and get ready for a night of music, laughter, and karaoke fun!\",\n    \"venue\": \"Old Town Pub, Chicago, IL, USA\",\n    \"datetime\": \"2023-03-21T02:00:00.000Z\",\n    \"timezone\": \"US/Eastern\",\n    \"areSeatsAvailable\": true,\n    \"isRegistered\": false,\n    \"isBookmarked\": false,\n    \"imgUrl\": \"https://i.ibb.co/Hx0gKgH/karaoke-2.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Event Bookmark/Registration",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isRegistered\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/events/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"events",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Registration Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"isRegistered\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/events/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"events",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-NjJUntWva8d3Ooq697+HdKOW5e4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Feb 2023 08:40:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Event Updated!!!"
+						},
+						{
+							"name": "Bookmark Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"isBookmarked\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/events/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"events",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-NjJUntWva8d3Ooq697+HdKOW5e4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Feb 2023 08:43:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Event Updated!!!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Themes",
+			"item": [
+				{
+					"name": "Get themes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/themes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"themes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/themes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"themes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a9-h3oNKIlg/BgQS0pWWf07wrFXy8c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Feb 2023 08:43:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"themes\": [\n        {\n            \"id\": 1,\n            \"colorHexCode\": \"#000000\"\n        },\n        {\n            \"id\": 2,\n            \"colorHexCode\": \"#800080\"\n        },\n        {\n            \"id\": 3,\n            \"colorHexCode\": \"#0000FF\"\n        },\n        {\n            \"id\": 4,\n            \"colorHexCode\": \"#9B9999\"\n        }\n    ],\n    \"preferredThemeId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Save Theme",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"preferredThemeId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/themes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"themes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"preferredThemeId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/themes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"themes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-dMlEToBlTtzZPBMqCf9TPQMY02Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Feb 2023 08:43:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Theme Updated!!!"
+						}
+					]
+				}
+			]
+		}
+	]
+}
